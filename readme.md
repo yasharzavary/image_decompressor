@@ -49,13 +49,15 @@ In this part, the image is input to the circuit, and the FPGA performs these ste
 In this step, the RGB image will be converted to a YUV image using this matrix.  
 The conversion from RGB to YUV can be expressed as:
 
+
 $$
+\begin{aligned}
 \begin{bmatrix}
 Y \\
 U \\
 V
 \end{bmatrix}
-=
+&=
 \begin{bmatrix}
 0.257 & 0.504 & 0.098 \\
 -0.148 & -0.291 & 0.439 \\
@@ -72,7 +74,9 @@ B
 128 \\
 128
 \end{bmatrix}
+\end{aligned}
 $$
+
 
 #### Downsampling
 We know that in an image, Y (brightness) is the main component that the human eye can detect, while U and V chroma components are less perceptible. Therefore, we downsample the U and V chroma matrices by 2 (horizontal downsampling, not vertical, because vertical downsampling would change the image height). In the end, only 2/3 of the total data remains.
@@ -140,6 +144,8 @@ $$
 Now we can scan our matrix and use a lossless coding algorithm to get the final image.
 
 For scanning, we will use this scan pattern:
+
+
 $$
 \text{ZigZag Order} =
 [\
@@ -149,6 +155,8 @@ $$
 $$
 
 For the matrix:
+
+
 $$
 \begin{bmatrix}
 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\
@@ -161,6 +169,7 @@ $$
 56 & 57 & 58 & 59 & 60 & 61 & 62 & 63
 \end{bmatrix}
 $$
+
 
 After this, we use the following algorithm to get the final compressed image:
 
@@ -176,6 +185,8 @@ After this, we use the following algorithm to get the final compressed image:
 6. **The value is between -256 and 255 (excluding -8 to 7)**: output `9_BIT` header (bits `00`) followed by the 9-bit signed value.
 
 For example, for this matrix:
+
+
 $$
 \begin{bmatrix}
 127 & -1 & 0 & 0 & 0 & 0 & 0 & 0 \\
@@ -189,10 +200,14 @@ $$
 \end{bmatrix}
 $$
 
+
 After scanning, we will have:
+
+
 $$
 127, -1, -2, 0, 0, 0, ...
 $$
+
 
 - **127**: step 6 → `00` (header) + `001111111` → `00001111111`
 - **-1**: negative one run (step 4) → `100` (header) + `01` (run length indicator) → `10001`
