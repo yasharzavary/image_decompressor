@@ -1,4 +1,4 @@
-![NoC](https://www.mdpi.com/micromachines/micromachines-12-00145/article_deploy/html/images/micromachines-12-00145-g002-550.jpg)
+![NoC](https://globlib4u.wordpress.com/wp-content/uploads/2013/10/fig12.png)
 
 # Hardware Implementation of an Image Decompressor
 ![Repo Size](https://img.shields.io/github/repo-size/yasharzavary/image_decompressor)
