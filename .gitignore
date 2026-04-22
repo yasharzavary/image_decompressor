@@ -30,3 +30,6 @@ Thumbs.db
 
 # Quartus user workspace (optional but common)
 *.qws
+
+# private data
+private_data/
