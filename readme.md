@@ -224,5 +224,5 @@ Now we can repeat this for other blocks, add the header and hardware ID, and sto
 After the lossless coding step, we should add the `.mic` identifier (4-byte hex value **DEADBEEF**), one bit to identify the quantization matrix, followed by 15 bits for width and 16 bits for height identifiers.  
 After this, our data will be stored in the memory.
 
-
+you can check flowchart of image compressing from [draw.io](https://drive.google.com/file/d/1hQkjxFl8IbY9iDqIVWa1vJVeeCghfYez/view?usp=sharing)
 
