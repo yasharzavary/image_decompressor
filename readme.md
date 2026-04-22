@@ -1,4 +1,4 @@
-![NoC](https://globlib4u.wordpress.com/wp-content/uploads/2013/10/fig12.png)
+![NoC](https://people.ece.cornell.edu/land/courses/ece5760/FinalProjects/f2009/jl589_jbw48/jl589_jbw48/dataflow.png)
 
 # Hardware Implementation of an Image Decompressor
 ![Repo Size](https://img.shields.io/github/repo-size/yasharzavary/image_decompressor)
