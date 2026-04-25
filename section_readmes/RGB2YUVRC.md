@@ -27,3 +27,8 @@ Another important issue is the **RAM**. During the conversion process, the RAM s
 - The `conversion limit` flip-flop is used to synchronize the `system state` flip-flop with other components. This signal is used to control the `counter` and the `system state`. When the counter reaches `76800`, the conversion is complete, and the system becomes ready for a new operation.
 
   At this point, the input of the `system state` flip-flop is selected through the MUX. If the user does not request a new conversion, the system state becomes `0`, and all other components (such as `RAM` write access) are available to the user again.
+
+
+For one test circuit that go from `0` to `8`, watch this gif:
+
+![demo](../pictures/RGB2YUVfullcircuit.gif)
