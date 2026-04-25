@@ -237,3 +237,7 @@ you can check flowchart of image compressing from [draw.io](https://drive.google
 👉 [RGB2YUV conversion](section_readmes/RGB2YUV.md)
 
 👉 [RGB2YUV conversion RAM control](section_readmes/RGB2YUVRC.md)
+
+after this step, we will have this system(high abstract)
+
+![step123_circuit](pictures/step123highabstract.jpg)
