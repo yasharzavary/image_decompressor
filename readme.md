@@ -38,6 +38,8 @@
         - Future plan
 2. [Hardware Description](#Hardware-Description)
     - RAM
+    - RGB2YUV conversion
+    - RGB2YUV conversion RAM control
 
 
 ## Project Description
@@ -234,4 +236,4 @@ you can check flowchart of image compressing from [draw.io](https://drive.google
 
 👉 [RGB2YUV conversion](section_readmes/RGB2YUV.md)
 
-The main system is like this:
+👉 [RGB2YUV conversion RAM control](section_readmes/RGB2YUVRC.md)
