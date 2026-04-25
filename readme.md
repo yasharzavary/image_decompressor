@@ -232,12 +232,15 @@ you can check flowchart of image compressing from [draw.io](https://drive.google
 
 
 ## Hardware Description
+
 👉 [RAM](section_readmes/Ram.md)
 
 👉 [RGB2YUV conversion](section_readmes/RGB2YUV.md)
 
 👉 [RGB2YUV conversion RAM control](section_readmes/RGB2YUVRC.md)
 
-after this step, we will have this system(high abstract)
+After this step, we will have the following system (high-level abstraction):
 
 ![step123_circuit](pictures/step123highabstract.jpg)
+
+> *NOTE:* An important point is that when we implement this design in VHDL, we can use only synchronous reading. This is because the system cannot handle large address-space combinational reads efficiently. Therefore, we must implement synchronous reading, which means the output will be delayed by one clock cycle.
